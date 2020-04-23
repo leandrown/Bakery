@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -33,6 +34,9 @@ namespace Bakery.Pages
               Your total is ${Product.Price * OrderQuantity}.<br />
               We will contact you if we have questions about your order. Thanks!<br />";
 
+              /*
+              Local test email
+              ---------------------------------------------------------------------
               using(SmtpClient smtp = new SmtpClient())
               {
                  smtp.DeliveryMethod = SmtpDeliveryMethod.SpecifiedPickupDirectory;
@@ -43,6 +47,27 @@ namespace Bakery.Pages
                  message.Body = body;
                  message.IsBodyHtml = true;
                  message.From = new MailAddress("sales@fourthcoffee.com");
+                 await smtp.SendMailAsync(message);
+              }
+              -------------------------------------------------------------------- */
+
+              using(SmtpClient smtp = new SmtpClient())
+              {
+                 NetworkCredential credential = new NetworkCredential
+                 {
+                    UserName = "contato@mandrillus.com.br",
+                    Password = ""
+                 };
+                 smtp.Credentials = credential;
+                 smtp.Host = "smtp-mail.outlook.com";
+                 smtp.Port = 587;
+                 smtp.EnableSsl = true;
+                 MailMessage message = new MailMessage();
+                 message.To.Add(OrderEmail);
+                 message.Subject = "Fourth Coffee - New Order";
+                 message.Body = body;
+                 message.IsBodyHtml = true;
+                 message.From = new MailAddress("contato@mandrillus.com.br");
                  await smtp.SendMailAsync(message);
               }
               return RedirectToPage("OrderSuccess");
