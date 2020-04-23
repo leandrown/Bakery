@@ -20551,6 +20551,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\repos\\labs\\razor-pages-mandrillus\\Bakery\\Pages\\OrderSuccess.cshtml",
+      "TargetPath": "Pages\\OrderSuccess.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\repos\\labs\\razor-pages-mandrillus\\Bakery\\Pages\\Order.cshtml",
       "TargetPath": "Pages\\Order.cshtml",
       "FileKind": "mvc"

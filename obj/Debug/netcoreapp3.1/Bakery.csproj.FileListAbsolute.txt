@@ -75,3 +75,4 @@ D:\repos\labs\razor-pages-mandrillus\Bakery\bin\Debug\netcoreapp3.1\runtimes\win
 D:\repos\labs\razor-pages-mandrillus\Bakery\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 D:\repos\labs\razor-pages-mandrillus\Bakery\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\repos\labs\razor-pages-mandrillus\Bakery\obj\Debug\netcoreapp3.1\Razor\Pages\Order.cshtml.g.cs
+D:\repos\labs\razor-pages-mandrillus\Bakery\obj\Debug\netcoreapp3.1\Razor\Pages\OrderSuccess.cshtml.g.cs

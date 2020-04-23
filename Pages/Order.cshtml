@@ -43,7 +43,7 @@
                   <span id="orderPrice" class="order-calc">@Model.Product.Price.ToString("f")</span>
                   =
                   <span id="orderTotal" class="order-calc">@Model.Product.Price.ToString("f")</span>
-                  <span asp-validation-for="OrderQuntity"></span>
+                  <span asp-validation-for="OrderQuantity"></span>
                </div>
             </li>
          </ul>
@@ -56,6 +56,7 @@
 </form>
 @section scripts
 {
+   <partial name="_ValidationScriptsPartial"></partial>
    <script type="text/javascript">
       $(function () {
          var price = parseFloat($("#orderPrice").text()).toFixed(2),
